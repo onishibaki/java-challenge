@@ -11,71 +11,72 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="EMPLOYEE")
+@Table(name = "EMPLOYEE")
 public class Employee {
-	
-	 public Employee() {
-		 
-	    }
-	
-	  public Employee(String department,String name, Integer salary) {
-		  this.department = department;
-		  this.name = name;
-		  this.salary = salary;
-      }
-	  
-	@Getter
-    @Setter
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
 
-    @Getter
-    @Setter
-    @Column(name="EMPLOYEE_NAME")
-    private String name;
+  public Employee() {
 
-    @Getter
-    @Setter
-    @Column(name="EMPLOYEE_SALARY")
-    private Integer salary;
+  }
 
-    @Getter
-    @Setter
-    @Column(name="DEPARTMENT")
-    private String department;
-    
-    
-    public Long getId() {
-     return this.id;
-    }
+  // Adding constructor for getter and setter
+  public Employee(String department, String name, Integer salary) {
+    this.department = department;
+    this.name = name;
+    this.salary = salary;
+  }
 
-    public String getName() {
-     return this.name;
-    }
+  @Getter
+  @Setter
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    public Integer getSalary() {
-     return this.salary;
-    }
-  
-    public String getDepartment() {
-     return this.department;
-    }
+  @Getter
+  @Setter
+  @Column(name = "EMPLOYEE_NAME")
+  private String name;
 
-    public void setId(Long id) {
-     this.id = id;
-    }
+  @Getter
+  @Setter
+  @Column(name = "EMPLOYEE_SALARY")
+  private Integer salary;
 
-    public void setName(String name) {
-     this.name = name;
-    }
+  @Getter
+  @Setter
+  @Column(name = "DEPARTMENT")
+  private String department;
 
-    public void setSalary(Integer salary) {
-     this.salary = salary;
-    }
-  
-    public void setDepartment(String department) {
-      this.department = department;
-    }
+  // Getter and Setter of Database fields
+  public Long getId() {
+    return this.id;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public Integer getSalary() {
+    return this.salary;
+  }
+
+  public String getDepartment() {
+    return this.department;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setSalary(Integer salary) {
+    this.salary = salary;
+  }
+
+  public void setDepartment(String department) {
+    this.department = department;
+  }
 
 }
